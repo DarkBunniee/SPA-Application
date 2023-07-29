@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body 
+{
+  overflow-x: hidden;
+  background: #fff;
+  min-height: 100vh;
+}
+
+header 
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+.logo 
+{
+  color: #112434;
+  font-weight: 700;
+  font-size: 2em;
+  text-decoration: none;
+}
+.navigation 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.navigation li 
+{
+  list-style: none;
+}
+.navigation li a 
+{
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #112434;
+  border-radius: 20px;
+}
+.navigation li a:hover ,
+.navigation li a.active
+{
+  background: #112434;
+  color: #fff;
+}
+.parallax 
+{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.parallax img 
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+#text 
+{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 4em;
+  color: #112434;
+}
+.sec 
+{
+  position: relative;
+  padding: 100px;
+  background: #112434;
+}
+.sec h2 
+{
+  font-size: 3em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.sec h4
+{
+  font-size: 2em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.sec h5
+{
+  font-size: 1.5em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.sec ul li
+{
+  font-size: 1em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.sec p 
+{
+  font-size: 1em;
+  color: #fff;
+  font-weight: 300;
+}
+
+/* Add styles to the tap to top button */
+#tapToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #000000;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 24px;
+  text-align: center;
+  line-height: 50px;
+}
+
+/* Center the arrow inside the button */
+#tapToTopBtn::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 4px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 5px 8.7px 5px; /* Adjust the values to control the arrow size */
+  border-color: transparent transparent white transparent;
+}
+
+/* Styles for the marquee container */
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Styles for the scrolling text effect */
+.marquee-container p {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 30s linear infinite; /* Adjust the animation duration as needed */
+}
+
+/* Keyframes for the scrolling animation */
+@keyframes marquee {
+  from {
+      transform: translateX(100%); /* Start position of the text */
+  }
+  to {
+      transform: translateX(-100%); /* End position of the text */
+  }
+}
+
